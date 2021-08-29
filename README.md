@@ -1,9 +1,7 @@
  # 🔸OpenPWA🔸
  ##### OpenPWA is a boilerplate for deploying pwa using Github Pages.
-
-
 # [Open PWA](http://pranoysarkar.github.io/OpenPWA/)
-
+ [Open PWA](http://SrGeneroso.github.io/OpenPWA/)
 #### How to build your own?
 - Fork this project on github
 - Enable Github pages option in settings
