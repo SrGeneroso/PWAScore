@@ -1,12 +1,12 @@
 {
-  "name": "Open PWA",
-  "short_name": "Open PWA",
+  "name": "SRGmultiApp",
+  "short_name": "SRGmultiApp",
   "start_url": "./", 
   "scope": ".",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#fff",
-  "theme_color": "#640700",
+  "background_color": "1E1E1E",
+  "theme_color": "#1E1E1E",
   "newBranch":"true",
   "icons": [
     {
