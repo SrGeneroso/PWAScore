@@ -8,10 +8,9 @@
     <meta name="description" content="Open Github PWA is a template for building PWA with github pages">
 
     <!--Social meta-->
-    <meta property="og:title" content="Open Github PWA" />
+    <meta property="og:title" content="SRG SCORE" />
     <meta property="og:url" content="" />
-    <meta property="og:description"
-        content="This is a PWA boilerplate, with cache busting mechanism and preconfigured Github Pages deployment" />
+    <meta property="og:description" content="This is a PWA boilerplate, with cache busting mechanism and preconfigured Github Pages deployment" />
     <meta property="og:image" content="/assets/icons/icon.png" />
     <meta property="og:type" content="website" />
     <!---->
@@ -32,62 +31,118 @@
 <body>
     <div id="appContainer" class="container">
         <header>
-            <h1> APP test for SRGmultiAPP </h1>
-            <div id="version">
+            <h1> Score APP </h1>
 
-            </div>
         </header>
         <div class="body">
+            <div class="scoreTable">
 
-            <p>
-                Esta pagina aspira a convertirse en el template necesario para crear miniutilidades basadas en pwa.
-            </p>
-            <p>
-                Primera prueba, vamos a realizar unos cambios en el icono y demas, vemos el manifest.
-            </p>
-            <ol>
-                <li>Fork this project on github</li>
-                <li>Enable github pages option</li>
-                <li>Done!! access your github pages url</li>
-            </ol>
-            <p>
-                Check <a href="https://github.com/PranoySarkar/OpenPWA">here </a>  for more information 
-            </p>
-            <p>
-                At the beginning it might take some time to deploy, if it shows 404 wait for 5 mins.
-            </p>
-            <p>
-                If you dont see the download button bollow then delete the previous install.
-            </p>
-            <p>
-                <a href="https://pranoysarkar.github.io/OpenPWA/">Open in APP </a>
-            </p>
+            </div>
+            <div class="currentRoundPlayers">
+                <div class="roundPlayer yellow">
+                    <button class="learn-more">player1</button>
+                    <div class="playerScore">128</div>
+                </div>
+                <div class="roundPlayer red">
+                    <button class="learn-more">player1</button>
+                    <div class="playerScore">128</div>
+                </div>
+                <div class="roundPlayer blue">
+                    <button class="learn-more">player1</button>
+                    <div class="playerScore">128</div>
+                </div>
 
-            <div class="controllers">
-                <div class="downloadPrompt">
-                    <div class="promptControllers">
-                        <button class="downloadButton">Download </button>
-                    </div>
+            </div>
+            <div class="currentPlayerScore grey">
+                <div class="operatorLine">
+                    <button class="learn-more">1</button>
+                    <button class="learn-more">5</button>
+                    <button class="learn-more ">10</button>
+                </div>
+                <div class="operatorLine">
+                    <button class="learn-more">-</button>
+                    <button class="learn-more">0</button>
+                    <button class="learn-more">+</button>
                 </div>
             </div>
-            <footer>
-            </footer>
-
-            <div class="hiddenElements">
+            <div class="roundEnd green">
+                <button class="learn-more">End Round</button>
             </div>
+            <div class="scrollable">
+                <div>
+                    <table cellpadding="1" cellspacing="1">
 
+                        <tr>
+                            <td>Player 1</td>
+                            <td>-10</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>Player 2</td>
+                            <td>-10</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>Player 3</td>
+                            <td>-10</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                            <td>32</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
 
         </div>
     </div>
 
-    <div class="bigFullScreen">
 
-    </div>
     <script type="text/javascript">
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker
                 .register(`service-worker.js`)
-                .then(function () {
+                .then(function() {
                     console.log("Service Worker Registered");
                 });
         }
