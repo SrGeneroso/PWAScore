@@ -1,54 +1,64 @@
 /* COLOR PALETTE*/
-:root{
+
+:root {
     --lightcolor: #FFF0F0;
-    --color:#FFE9E9;
-    --dark-color:#F9C4D2;
-    --border-color:#B18597;
-    --shadow-color:#FFE3E2;
-}
-.grey{
-    --lightcolor: #F7F7F7;
-    --color:#F5F5F5;
-    --dark-color:#DEDEDE;
-    --border-color:#9C9C9C;
-    --shadow-color:#F0F0F0;
-}
-.green{
-    --lightcolor: #F0FFF0;
-    --color:#F0FFF0;
-    --dark-color:#D5FAC5;
-    --border-color:#98B084;
-    --shadow-color:#E3FFE3;
-}
-.red{
-    --lightcolor: #FFF0F0;
-    --color:#FFE9E9;
-    --dark-color:#F9C4D2;
-    --border-color:#B18597;
-    --shadow-color:#FFE3E2;
-}
-.blue{
-    --lightcolor: #F0F2FF;
-    --color:#E8EBFF;
-    --dark-color:#C5DAFA;
-    --border-color:#849CB0;
-    --shadow-color:#E3E6FF;
-}
-.yellow{
-    --lightcolor: #FAFFF0;
-    --color:#F8FFE8;
-    --dark-color:#F8FAC5;
-    --border-color:#B0AB84;
-    --shadow-color:#F6FFE3;
+    --color: #FFE9E9;
+    --dark-color: #F9C4D2;
+    --border-color: #B18597;
+    --shadow-color: #FFE3E2;
 }
 
+.grey {
+    --lightcolor: #F7F7F7;
+    --color: #F5F5F5;
+    --dark-color: #DEDEDE;
+    --border-color: #9C9C9C;
+    --shadow-color: #F0F0F0;
+}
+
+.green {
+    --lightcolor: #F0FFF0;
+    --color: #F0FFF0;
+    --dark-color: #D5FAC5;
+    --border-color: #98B084;
+    --shadow-color: #E3FFE3;
+}
+
+.red {
+    --lightcolor: #FFF0F0;
+    --color: #FFE9E9;
+    --dark-color: #F9C4D2;
+    --border-color: #B18597;
+    --shadow-color: #FFE3E2;
+}
+
+.blue {
+    --lightcolor: #F0F2FF;
+    --color: #E8EBFF;
+    --dark-color: #C5DAFA;
+    --border-color: #849CB0;
+    --shadow-color: #E3E6FF;
+}
+
+.yellow {
+    --lightcolor: #FAFFF0;
+    --color: #F8FFE8;
+    --dark-color: #F8FAC5;
+    --border-color: #B0AB84;
+    --shadow-color: #F6FFE3;
+}
+
+
 /* Main Style */
+
 @import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-*::before, *::after {
-  box-sizing: border-box;
+
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 html {
@@ -57,15 +67,15 @@ html {
 }
 
 body {
-  font-family: "Rubik", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 0;
-  min-height: 100vh;
-  background: #fff;
-  display: flex;
-  align-items: center;
- justify-content: center;
+    font-family: "Rubik", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    max-height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header {
@@ -74,112 +84,135 @@ header {
 
 #appContainer {
     overflow-x: hidden;
-    display: grid;
     height: 100vh;
-    grid-template-rows: auto 1fr auto;
+    width: 100vw;
 }
-
 
 
 /* Button Style & Animation
 CodePen https://codepen.io/kathykato/pen/gOOjgmP
 Imported css and added variables.
 */
+
 button {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  font-size: inherit;
-  font-family: inherit;
-  margin: 10px 10px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    margin: 10px 10px;
 }
+
 button.learn-more {
-  font-weight: 600;
-  color: #382b22;
-  text-transform: uppercase;
-  padding: 1.25em 2em;
-  background: var(--lightcolor);
-  border: 2px solid var(--border-color);
-  border-radius: 0.75em;
-  transform-style: preserve-3d;
-  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+    font-weight: 600;
+    color: #382b22;
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: var(--lightcolor);
+    border: 2px solid var(--border-color);
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
 }
+
 button.learn-more::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--dark-color);
-  border-radius: inherit;
-  box-shadow: 0 0 0 2px var(--border-color), 0 0.625em 0 0 var(--shadow-color);
-  transform: translate3d(0, 0.75em, -1em);
-  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--dark-color);
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px var(--border-color), 0 0.625em 0 0 var(--shadow-color);
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
 }
+
 button.learn-more:hover {
-  background: var(--color);
-  transform: translate(0, 0.25em);
+    background: var(--color);
+    transform: translate(0, 0.25em);
 }
+
 button.learn-more:hover::before {
-  box-shadow: 0 0 0 2px var(--border-color), 0 0.5em 0 0 var(--shadow-color);
-  transform: translate3d(0, 0.5em, -1em);
+    box-shadow: 0 0 0 2px var(--border-color), 0 0.5em 0 0 var(--shadow-color);
+    transform: translate3d(0, 0.5em, -1em);
 }
+
 button.learn-more:active {
-  background: var(--color);
-  transform: translate(0em, 0.75em);
+    background: var(--color);
+    transform: translate(0em, 0.75em);
 }
+
 button.learn-more:active::before {
-  box-shadow: 0 0 0 2px var(--border-color), 0 0 var(--shadow-color);
-  transform: translate3d(0, 0, -1em);
+    box-shadow: 0 0 0 2px var(--border-color), 0 0 var(--shadow-color);
+    transform: translate3d(0, 0, -1em);
 }
+
 
 /* Table Style
 https://codepen.io/joshlondon/pen/rnDeg
 */
-table, th, td {
+
+.tableContainer {
+    margin: 0 auto;
+    width: 80%;
+}
+
+table,
+th,
+td {
     border: 1px solid #ccc;
-  }
-  
-  table {
+}
+
+table {
     border-spacing: 0;
     border-collapse: collapse;
     width: auto;
-  }
-  table th, table td {
+}
+
+table th,
+table td {
     padding: 6px 8px;
     vertical-align: top;
     white-space: nowrap;
-  }
-  table th {
+}
+
+table th {
     background: #ddd;
     font-weight: 900;
     text-align: left;
     white-space: nowrap;
-  }
+}
 
-  table tbody tr:nth-child(1) {
-    background: #F8FFE8;;
-  }
-  table tbody tr:nth-child(2) {
-    background: #FFE9E9;;
-  }
-  table tbody tr:nth-child(3) {
-    background: #E8EBFF;;
-  }
+table tbody tr:nth-child(1) {
+    background: #F8FFE8;
+    ;
+}
 
-  .scrollable {
+table tbody tr:nth-child(2) {
+    background: #FFE9E9;
+    ;
+}
+
+table tbody tr:nth-child(3) {
+    background: #E8EBFF;
+    ;
+}
+
+.scrollable {
     overflow: hidden;
     position: relative;
     width: 100%;
-  }
-  .scrollable.is-scrollable:after {
+}
+
+.scrollable.is-scrollable:after {
     position: absolute;
     top: 0;
     left: 100%;
@@ -188,69 +221,75 @@ table, th, td {
     border-radius: 10px 0 0 10px/50% 0 0 50%;
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.25);
     content: "";
-  }
-  .scrollable > div {
+}
+
+.scrollable>div {
     overflow-x: auto;
-  }
-  .scrollable > div ::-webkit-scrollbar {
+}
+
+.scrollable>div ::-webkit-scrollbar {
     height: 12px;
-  }
-  .scrollable > div ::-webkit-scrollbar-track {
+}
+
+.scrollable>div ::-webkit-scrollbar-track {
     background: #f0f0f0;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.15) inset;
-  }
-  .scrollable > div ::-webkit-scrollbar-thumb {
+}
+
+.scrollable>div ::-webkit-scrollbar-thumb {
     background: #ccc;
     border-radius: 6px;
-  }
+}
+
 
 /*Custom Style*/
 
-.currentRoundPlayers{
+.currentRoundPlayers {
     display: flex;
     flex-direction: column;
+    padding: 10px 10px;
+    align-items: center;
 }
-.roundPlayer{
+
+.roundPlayer {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 90%;
     justify-content: space-evenly;
     border: 3px solid var(--border-color);
     border-radius: 10px;
     padding-bottom: 10px;
     margin-bottom: 5px;
-
     background-color: var(--lightcolor);
 }
-button .roundPlayer{
+
+button .roundPlayer {
     width: 70%;
-    
 }
-.playerScore{
+
+.playerScore {
     width: 30%;
     height: 100%;
     align-self: center;
     text-align: center;
-    background-color: var(--color );
+    background-color: var(--color);
     border: 3px solid var(--border-color);
     border-radius: 10px;
     font-size: larger;
-    line-height:3rem;
+    line-height: 3rem;
 }
 
-
-
-.operatorLine  {
+.operatorLine {
     /* margin-top: 10px; */
     margin-bottom: 5px;
     display: flex;
     width: 100%;
-    
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.roundEnd{
+
+.roundEnd {
     margin-top: 35px;
     margin-bottom: 25px;
     width: 100%;
