@@ -36,95 +36,49 @@
             </div>
             <div class="currentRoundPlayers">
                 <div class="roundPlayer yellow">
-                    <button class="learn-more">player1</button>
-                    <div class="playerScore">128</div>
+                    <button class="learn-more" onclick="selectPlayer(0)">Enrique</button>
+                    <div class="playerScore" id="player1CurrentScore">0</div>
                 </div>
                 <div class="roundPlayer red">
-                    <button class="learn-more">player1</button>
-                    <div class="playerScore">128</div>
+                    <button class="learn-more" onclick="selectPlayer(1)">Isabel</button>
+                    <div class="playerScore" id="player2CurrentScore">0</div>
                 </div>
                 <div class="roundPlayer blue">
-                    <button class="learn-more">player1</button>
-                    <div class="playerScore">128</div>
+                    <button class="learn-more" onclick="selectPlayer(2)">Alfonso</button>
+                    <div class="playerScore" id="player3CurrentScore">0</div>
                 </div>
 
             </div>
             <div class="currentPlayerScore grey">
                 <div class="operatorLine">
-                    <button class="learn-more">1</button>
-                    <button class="learn-more">5</button>
-                    <button class="learn-more ">10</button>
+                    <button class="learn-more" onclick="addScoreToPlayer(1)">1</button>
+                    <button class="learn-more" onclick="addScoreToPlayer(5)">5</button>
+                    <button class="learn-more" onclick="addScoreToPlayer(10)">10</button>
                 </div>
                 <div class="operatorLine">
-                    <button class="learn-more">-</button>
-                    <button class="learn-more">0</button>
-                    <button class="learn-more">+</button>
+                    <button class="learn-more" onclick="submitPlayerScore(0)">-</button>
+                    <button class="learn-more" onclick="submitPlayerScore(1)">0</button>
+                    <button class="learn-more" onclick="submitPlayerScore(2)">+</button>
                 </div>
             </div>
             <div class="roundEnd green">
-                <button class="learn-more">End Round</button>
+                <button class="learn-more" onclick="submitRound()">+ RONDA</button>
             </div>
             <div class="tableContainer">
                 <div class="scrollable">
-                    <div>
+                    <div id="scoreTable">
                         <table cellpadding="1" cellspacing="1">
-
-                            <tr>
-                                <td>Player 1</td>
-                                <td>-10</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
+                            <tr id="tablePlayer1">
+                                <td>Enrique</td>
+                                <td>0</td>
                             </tr>
-                            <tr>
-                                <td>Player 2</td>
-                                <td>-10</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
+                            <tr id="tablePlayer2">
+                                <td>Isabel</td>
+                                <td>0</td>
                             </tr>
-                            <tr>
-                                <td>Player 3</td>
-                                <td>-10</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
-                                <td>32</td>
+                            <tr id="tablePlayer3">
+                                <td>Alfonso</td>
+                                <td>0</td>
                             </tr>
 
                         </table>

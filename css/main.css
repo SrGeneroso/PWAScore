@@ -163,6 +163,7 @@ https://codepen.io/joshlondon/pen/rnDeg
 .tableContainer {
     margin: 0 auto;
     width: 80%;
+    margin-bottom: 10px;
 }
 
 table,
@@ -219,8 +220,9 @@ table tbody tr:nth-child(3) {
     width: 50px;
     height: 100%;
     border-radius: 10px 0 0 10px/50% 0 0 50%;
-    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.25);
     content: "";
+    overflow-x: auto;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.25);
 }
 
 .scrollable>div {
