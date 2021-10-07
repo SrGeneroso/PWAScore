@@ -1,16 +1,15 @@
 let cacheName = "pwascore"; // 👈 any unique name
 
 let filesToCache = [
-    "/pwascore/", // 👈 your repository name , both slash are important
-    "service-worker.js",
-    "js/main.js",
-    "js/install-handler.js",
-    "js/settings.js",
-    "css/main.css",
-    "assets/icons/icon.png",
-    "manifest.json",
+    "./pwascore/", // 👈 your repository name , both slash are important
+    "./service-worker.js",
+    "./js/main.js",
+    "./js/install-handler.js",
+    "./js/settings.js",
+    "./css/main.css",
+    "./assets/icons/icon.png",
+    "./manifest.json",
     // add your assets here 
-    // ❗️❕donot add config.json here ❗️❕
 ];
 
 self.addEventListener("install", function(event) {
