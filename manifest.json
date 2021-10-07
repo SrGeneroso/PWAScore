@@ -1,7 +1,7 @@
 {
     "name": "SRG Score",
     "short_name": "SRGScore",
-    "start_url": "./",
+    "start_url": "https://srgeneroso.github.io/PWAScore/",
     "scope": ".",
     "display": "standalone",
     "orientation": "portrait",
